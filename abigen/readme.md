@@ -1,5 +1,5 @@
 
-生成abi和bin
+生成abi和bin  solc为0.8.20版本
 .\solc.exe --abi --bin --output-dir ./output erc20.sol
 
 生成go文件

@@ -12,14 +12,14 @@ type IDeployLogic interface {
 
 ```
 
-部署合约的调用参考以下以部署钱包合约为例：
+部署合约的调用参考以下以部署合约为例：
 
 ```go
 var opts []chain.ChainOption
 opts = append(opts, chain.WithChainURL(URL))
 opts = append(opts, chain.WithChainHexKey(Key))
 
-logicCli, err := NewWalletClient(common.Address{}, opts...)
+logicCli, err := NewMyTokenClient(common.Address{}, opts...)
 if err != nil {
 t.Fatal(err)
 }
@@ -47,7 +47,7 @@ fmt.Println("proxy contract address :", p.String())
 	opts = append(opts, chain.WithChainURL(URL))
 	opts = append(opts, chain.WithChainHexKey(Key))
 
-	logicCli, err := NewWalletClient(common.HexToAddress("0x528BD95D1de5bE1Aa110E3126bf3790d8F635A97"), opts...)
+	logicCli, err := NewMyTokenClient(common.HexToAddress("0x000000000000000000000"), opts...)
 	if err != nil {
 		t.Fatal(err)
 	}
